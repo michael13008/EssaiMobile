@@ -1,0 +1,400 @@
+
+ 
+ body{
+     background: #ece7e0e1;
+     margin-top: 50px;
+     margin: auto;
+ }
+ 
+ /*Les headers des 2 pages vont avoir des comportements différents avec page 1 où chaque élément est en dessous de l'autre et occupe
+ tout l'espace # en page 2 où ils vont tous être les uns à coté des autres.
+ Le headeer de la page1 a un id entetePage1 et celui de la page 2 entetePAge2.
+ Pour la page 2, on définit des tailles a peu pres équivalente entre les titres regroupées en div et la liste mentionnant le compte connecte.
+ */
+ 
+ #entetePage1  {
+     margin: auto;
+     display: flex;
+     flex-flow: column wrap;
+     justify-items: center;
+     text-align: center;
+     border: 1px solid red;
+     width: 35%;
+
+ }
+
+ #entetePage2  {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ff00ff;
+    width: 100%;
+
+}
+
+#entetePage1 img{
+    width: 70px;
+    height: 70px;
+}
+
+ 
+ #entetePage1 h1, #entetePage2 div h1{
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-size: 1.3em;
+ }
+ 
+ #entetePage1 h2, #entetePage2 div h2{
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     font-style: italic;
+     font-size: 1.05em;
+ }
+ 
+ #entetePage2 div h1,#entetePage2 div h2 {
+     width: 80%;
+     border: 1px solid red;
+     margin-left: 50px;
+ 
+ }
+ 
+ 
+ 
+ #entetePage2 div  {
+ border: 1px solid yellow;
+ width: 40%;
+ }
+ 
+ #entetePage2 ul {
+     text-align: left;
+ 
+     list-style-type: none;    
+     width: 200px;
+     border: 1px solid #ff00ff;
+ }
+ 
+ #entetePage2 ul {
+     text-align: left;
+ 
+     list-style-type: none;    
+     width: 200px;
+     border: 1px solid #ff00ff;
+ }
+ 
+ #entetePage2 ul li {
+     line-height: 1.35em;
+     font-size: 1.15em;
+      }
+  
+#entetePage2 ul li a {
+    color: #000;
+}
+
+#entetePage2 ul li a:hover {
+    color: red;
+}
+
+ 
+      form {
+         border:4px solid blue;
+         border-radius: 7px 7px 4px 4px;
+         width: 450px;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+        justify-content: center;
+         flex-wrap: wrap;
+         background-color: #ffb442;
+     }
+     
+     form h2{
+         font-size: 1.3em;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+         font-weight: 400;
+         text-transform: uppercase;
+         color: #ed0600;
+     }
+     
+     
+     form ul {
+         text-decoration: none;
+         list-style-type: none;
+     }
+     
+     /* Pas de marge gauche appliquée pour tenir compte du retraite naturellement effectrué pour les li d'une liste*/
+     form ul > li {
+         margin:25px;
+         margin-left:0;
+         margin-right: 40px;
+     }  
+     
+     label, input {
+         display: block;
+         width: 370px;
+         height: 20px;
+     }
+     
+     input {
+         text-align: center;
+         padding: 5px;
+         border: 1px solid black;
+     
+         }
+     
+     label {
+         font-weight: bolder;
+         letter-spacing: 0.10em;
+         color: #121eff;
+     
+     }    
+     
+     input:focus{
+         outline-color:  red;
+     }    
+     
+     
+     
+     
+     ::placeholder{
+         font-style:  italic;
+         text-align: center;
+     }
+     
+     /*on joue sur le dernier li de l ul correspondant aux boutons pour les aligner au mieux*/
+     
+     form ul li:last-child{
+         margin-left: 40px;
+     }
+     
+     button {
+         margin: 20px;
+         margin-left: 60px;
+         height: 40px;
+         width: 70px;
+         background-color: #00d6ed;
+         color: #000;
+         border-radius: 4px;
+         border: 1px solid black;
+     }
+ 
+     #imageCote1, #imageCote2 {
+         background-repeat: no-repeat;
+         background-origin: border-box;
+         background-clip: content-box;
+         border-radius: 14px;
+
+         
+     }
+
+     #imageCote1 {
+        background-image: url('Domotique.png');
+        background-size: 450px 300px;
+        width: 400px;
+        height: 270px;
+        border: 12px double #ffb442 ;
+
+
+
+     }
+
+     #imageCote2 {
+        background-image: url('ReleveTemperature.png');
+        background-size: 470px 310px;
+        width: 450px;
+        height: 300px;
+        border: 12px double pink ;
+
+
+
+     }
+ 
+     #blocCentralPage1,#blocCentralPage2 {
+         margin: auto;
+         display: flex; 
+         flex-direction: column ;
+         flex-wrap: wrap;
+         align-items: flex-start ;
+         justify-content: space-evenly;
+         border: 1px solid #ff00ff;
+     
+         }
+
+         #blocCentralPage1 ul li button a {
+      
+   text-decoration: none;
+   color :black;
+    
+        }
+ 
+         #blocCentralPage2, #blocCentralPage1 {
+      
+             width: 960px;
+             height: 1100px;
+     
+         }
+
+
+         #aligneImageTexte{
+            display: flex;
+            flex-flow: row wrap;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            width: 550px;
+            margin-top: 60px;
+            margin-left: -27px;
+        }
+
+        
+        
+        #aligneImageTexte div:first-child {
+            flex-basis: 15%;
+            flex-grow: 0;
+            flex-shrink: 2;
+           margin-left: 30px;
+        }
+        
+        
+        #aligneImageTexte div:nth-child(2) {
+           flex-grow: 1;
+            flex-basis: 60%;
+            font-size: 1.12em;
+            letter-spacing: 0.12em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: blue;
+        }
+        
+
+
+         #blocCentralPage2  #temperatureCentraleGauche p, #aligneImageTexte{
+             position: relative;
+             width: 470px;
+         }
+ 
+
+         
+     #blocCentralPage2  #temperatureCentraleGauche p:nth-of-type(1), #blocCentralPage2  #temperatureCentraleGauche p:nth-child(5)  {
+            font-size: 1.10em;
+            letter-spacing: 0.12em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: red;
+            font-style: italic;
+ }  
+ 
+ #blocCentralPage2  #temperatureCentraleGauche  p:nth-child(3), #blocCentralPage2  #temperatureCentraleGauche  p:last-child  {
+     font-size: 1.05em;
+     letter-spacing: 0.1em;
+ 
+     color: #000;
+ } 
+
+
+ 
+ 
+ /*eleve de temperature qui sera active en cliquant sur lees liens de la page 2*/
+ 
+ #releveTemperatureMasque{
+     display: none;
+     position: absolute;
+     top: 200px;
+     left:250px;
+     padding: 10px;
+     width: 500px;
+     background-color: rgba(0, 195, 255, 0.9);
+     border-radius:3px ;
+     border: 1px solid blue;
+ }
+ 
+ #releveTemperatureMasque:target{
+     display: block;
+ }
+ #releveTemperatureMasque ul {
+ 
+     list-style-type: none;
+ 
+ }
+ 
+ #releveTemperatureMasque h2 a{
+     top:5px;
+     right: 10px;
+     position: absolute;
+ }
+ 
+ #releveTemperatureMasque ul li{
+     margin-left: 60px;
+ }
+ 
+ #releveTemperatureMasque ul li:first-child, #releveTemperatureMasque ul li:nth-child(5),#releveTemperatureMasque ul li:nth-child(9)  {
+     font-size: 1.8em;
+     line-height: 3em;
+     font-style: italic;
+     margin-left: 0;
+ }
+ 
+ #releveTemperatureMasque ul li:nth-child(4), #releveTemperatureMasque ul li:nth-child(8), #releveTemperatureMasque ul li:nth-child(12) {
+     font-size: 1.4em;
+     font-weight: bold;
+     color: #ed0600;
+ }
+ 
+ 
+ 
+ li div span {
+     margin-left: 20px;
+     font-size: 2em;
+ }
+ 
+ 
+ /*Fin releve temperature masque*/
+ 
+ footer {
+             margin-top: 60px;
+             display: flex;
+             flex-direction: column;
+             flex-wrap: nowrap;
+             justify-content: space-evenly;
+         }    
+         
+         footer ul {
+             border: 1px solid red;
+         }
+         
+         footer ul li  {
+             font-size: 1.5em;
+             line-height: 2.5em;
+         }
+
+
+
+         #entetePage1, #entetePage2, #blocCentralPage1, #blocCentralPage2, footer {
+            padding-right:20px;
+            padding-left:30px;
+        }         
+
+         @media all and (min-width:775px) {
+
+       
+        
+            #entetePage1, #entetePage2,footer{
+                justify-content: center;
+                align-items: center;
+            }
+        
+           #blocCentralPage1, #blocCentralPage2{
+                justify-content: space-evenly;
+                align-items:center;
+        
+           }
+            footer{
+                flex-direction: row;
+            }
+        
+        
+            footer {
+                margin-top: 100px;
+            }    
+        
+        
+            
+        } 
+
+       
