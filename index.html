@@ -1,0 +1,84 @@
+<!Doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Mike PAVIO">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home page projet NFA016</title>
+        <link rel="stylesheet" href="SecondeVersionProjetNFA016.css">
+    </head>
+
+    <body>
+
+        <header id="entetePage1">
+           <div> <img src="Logo_Mimi.png" alt="logo_de_la_societe"> </div>
+            <h1>Domoticka13</h1>
+            <h2>Etre à l'écoute de nos clients au quotidien</h2>
+        </header>
+
+<!--Formulaire saisi et qui est fictif car ne permettra pas l accès à la page de connexion tenant compte de l identifiant et mot de passe
+mais renvoie à la 2ème page si on appuie sur Envoi-->
+
+    <section id="blocCentralPage1">  
+        <form id="mon_formulaire" method="get" action="Projet_NFA016_SANS_CSS.html">
+
+            <h2>Connexion à votre compte client</h2>
+
+            <ul>
+                <li>
+                    <label for="nom">Identifiant :</label>
+                </li>
+                
+                <li>    
+                    <input id="nom" type="text" required placeholder="Votre identifiant">
+                </li>
+                
+                <li>
+                    <label for="prenom">Mot de passe :</label>
+                </li>
+                
+                <li>
+                    <input id="prenom" type="text" required placeholder="Votre mot de passe">
+                </li>
+
+                <li>
+                    <button type="submit" id="envoi"> <a href="SecondeVersionProjetNFA016Page2.html"> Envoi </a></button> 
+                    <button type="reset" id="annule">Annule</button>
+                </li>
+            </ul>
+
+        </form>    
+
+
+
+<!--Cette photo ne sera visible que dans le mode tablette et à côté de la page de connexion-->
+        <aside id="imageCote1"> 
+        </aside>       
+
+    </section>  
+
+    <!--Les liens sont tous inactifs et simplement décoratifs ou en prévision de la poursuite du projet lorsque nous devrons créer d'autres pages-->
+<!--Nous pouvons envisager en mode téléphone portable plusieurs listes les unes en dessous des autres alors que les listes pourraient côte à côte en mode tablette-->            
+
+        <footer>
+
+            <ul>
+                <li>Qui sommes-nous?</li>
+                <li>Notre équipe</li>
+            </ul>
+
+            <ul>
+                <li>Nos différents marques</li>
+                <li>Nos services proposés</li>
+            </ul>
+
+            <ul>
+                <li>Aide </li>
+                <li>Contactez-nous</li>
+            </ul>    
+        </footer>
+
+    </body>
+
+</html>
