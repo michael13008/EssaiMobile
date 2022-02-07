@@ -3,7 +3,6 @@
  body{
      background: #ece7e0e1;
      margin-top: 50px;
-     margin: auto;
  }
  
  /*Les headers des 2 pages vont avoir des comportements différents avec page 1 où chaque élément est en dessous de l'autre et occupe
@@ -12,14 +11,26 @@
  Pour la page 2, on définit des tailles a peu pres équivalente entre les titres regroupées en div et la liste mentionnant le compte connecte.
  */
  
+
+ /*Comportement page1 a changer au dela de 600px*/
+
+ /*Margin auto fonctionne tres bien pour ensemble page1*/
+ 
+#entetePage1, #entetePage2, #blocCentralPage1, #blocCentralPage2,  footer {
+    width: 450px;
+    padding-right:20px;
+    padding-left:30px;
+    margin: auto;
+}
+
+
  #entetePage1  {
-     margin: auto;
      display: flex;
      flex-flow: column wrap;
      justify-items: center;
      text-align: center;
      border: 1px solid red;
-     width: 35%;
+     margin: auto;
 
  }
 
@@ -28,8 +39,7 @@
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ff00ff;
-    width: 100%;
+    border: 1px solid red;
 
 }
 
@@ -51,9 +61,9 @@
  }
  
  #entetePage2 div h1,#entetePage2 div h2 {
-     width: 80%;
+     width: 150px;
      border: 1px solid red;
-     margin-left: 50px;
+     margin-left: 15px;
  
  }
  
@@ -61,7 +71,6 @@
  
  #entetePage2 div  {
  border: 1px solid yellow;
- width: 40%;
  }
  
  #entetePage2 ul {
@@ -97,21 +106,24 @@
       form {
          border:4px solid blue;
          border-radius: 7px 7px 4px 4px;
-         width: 450px;
+         width: 400px;
+         height: 500px;
          display: flex;
          flex-direction: row;
          align-items: center;
         justify-content: center;
          flex-wrap: wrap;
          background-color: #ffb442;
+         margin-left: 0;
      }
      
      form h2{
-         font-size: 1.3em;
+         font-size: 1.15em;
          font-family: Verdana, Geneva, Tahoma, sans-serif;
          font-weight: 400;
          text-transform: uppercase;
          color: #ed0600;
+         margin-left: 10px;
      }
      
      
@@ -123,13 +135,13 @@
      /* Pas de marge gauche appliquée pour tenir compte du retraite naturellement effectrué pour les li d'une liste*/
      form ul > li {
          margin:25px;
-         margin-left:0;
+         margin-left:-20px;
          margin-right: 40px;
      }  
      
      label, input {
          display: block;
-         width: 370px;
+         width: 270px;
          height: 20px;
      }
      
@@ -160,14 +172,16 @@
      }
      
      /*on joue sur le dernier li de l ul correspondant aux boutons pour les aligner au mieux*/
-     
+
+
      form ul li:last-child{
-         margin-left: 40px;
-     }
+        margin-left: 0;
+    }
+
+     
      
      button {
          margin: 20px;
-         margin-left: 60px;
          height: 40px;
          width: 70px;
          background-color: #00d6ed;
@@ -187,33 +201,31 @@
 
      #imageCote1 {
         background-image: url('Domotique.png');
-        background-size: 450px 300px;
+        background-size: 420px 390px;
         width: 400px;
-        height: 270px;
-        border: 12px double #ffb442 ;
-
+        height: 370px;
+        border: 6px double #ffb442 ;
+        flex-shrink: 1;
 
 
      }
 
      #imageCote2 {
         background-image: url('ReleveTemperature.png');
-        background-size: 470px 310px;
-        width: 450px;
-        height: 300px;
-        border: 12px double pink ;
-
+        background-size: 420px 390px;
+        width: 400px;
+        height: 380px;
+        border: 6px double pink ;
+        margin-left: -50px;
 
 
      }
  
      #blocCentralPage1,#blocCentralPage2 {
-         margin: auto;
          display: flex; 
          flex-direction: column ;
          flex-wrap: wrap;
-         align-items: flex-start ;
-         justify-content: space-evenly;
+         align-items: center ;
          border: 1px solid #ff00ff;
      
          }
@@ -225,67 +237,85 @@
     
         }
  
-         #blocCentralPage2, #blocCentralPage1 {
-      
-             width: 960px;
-             height: 1100px;
-     
+        #blocCentralPage1{
+            height: 1100px;
+            justify-content: space-evenly;
+
+        }
+
+         #blocCentralPage2 {      
+             height: 1100px;     
+             justify-content: space-between;
+
          }
 
 
-         #aligneImageTexte{
+        .bleu {
+            color: blue;
+        }
+            
+        .rouge {
+            color:  red;
+        }
+            
+        .vert{
+            color: green;
+        }
+            
+        .orange{
+            color: orange;
+        }  
+
+        
+         .aligneImageTexte{
             display: flex;
             flex-flow: row wrap;
             height: 50px;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            width: 550px;
+            width: 500px;
             margin-top: 60px;
-            margin-left: -27px;
+            line-height: 2em;
         }
 
         
-        
-        #aligneImageTexte div:first-child {
+/*alignement des symboles avec temperature grace 2 div*/
+
+        .aligneImageTexte div:first-child {
             flex-basis: 15%;
             flex-grow: 0;
             flex-shrink: 2;
-           margin-left: 30px;
+           margin-left: 15px;
         }
         
         
-        #aligneImageTexte div:nth-child(2) {
+        .aligneImageTexte div:nth-child(2) {
            flex-grow: 1;
             flex-basis: 60%;
-            font-size: 1.12em;
-            letter-spacing: 0.12em;
+            font-size: 1.20em;
+            letter-spacing: 0.04em;
             font-family: Georgia, 'Times New Roman', Times, serif;
-            color: blue;
+            color: #834925;
+            margin-left: 20px;
         }
         
-
-
-         #blocCentralPage2  #temperatureCentraleGauche p, #aligneImageTexte{
-             position: relative;
-             width: 470px;
-         }
- 
-
-         
-     #blocCentralPage2  #temperatureCentraleGauche p:nth-of-type(1), #blocCentralPage2  #temperatureCentraleGauche p:nth-child(5)  {
+    
+        #blocCentralPage2  #temperatureCentraleGauche  #conseil1,   #blocCentralPage2  #temperatureCentraleGauche  #conseil2{
             font-size: 1.10em;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.03em;
             font-family: Georgia, 'Times New Roman', Times, serif;
-            color: red;
             font-style: italic;
- }  
+            font-weight: bolder;
+            text-align: center;
+         }  
  
- #blocCentralPage2  #temperatureCentraleGauche  p:nth-child(3), #blocCentralPage2  #temperatureCentraleGauche  p:last-child  {
-     font-size: 1.05em;
-     letter-spacing: 0.1em;
- 
-     color: #000;
- } 
+        #blocCentralPage2  #temperatureCentraleGauche  p:nth-child(4), #blocCentralPage2  #temperatureCentraleGauche  p:last-child  {
+             font-size: 1em;
+             letter-spacing: 0.1em;
+             color: #555;
+             line-height: 3.2em;
+             margin-left: 15px;
+        } 
 
 
  
@@ -296,9 +326,9 @@
      display: none;
      position: absolute;
      top: 200px;
-     left:250px;
+     left:0;
      padding: 10px;
-     width: 500px;
+     width: 400px;
      background-color: rgba(0, 195, 255, 0.9);
      border-radius:3px ;
      border: 1px solid blue;
@@ -315,12 +345,12 @@
  
  #releveTemperatureMasque h2 a{
      top:5px;
-     right: 10px;
+     right: 85px;
      position: absolute;
  }
  
  #releveTemperatureMasque ul li{
-     margin-left: 60px;
+     margin-left: 10px;
  }
  
  #releveTemperatureMasque ul li:first-child, #releveTemperatureMasque ul li:nth-child(5),#releveTemperatureMasque ul li:nth-child(9)  {
@@ -352,49 +382,21 @@
              flex-direction: column;
              flex-wrap: nowrap;
              justify-content: space-evenly;
+             align-items: center;
+             border: 1px solid black;
          }    
          
-         footer ul {
+footer ul {
              border: 1px solid red;
+             width: 100%;
+             margin: auto;
          }
          
-         footer ul li  {
+footer ul li  {
              font-size: 1.5em;
              line-height: 2.5em;
+             margin-left: 100px;
+
          }
 
 
-
-         #entetePage1, #entetePage2, #blocCentralPage1, #blocCentralPage2, footer {
-            padding-right:20px;
-            padding-left:30px;
-        }         
-
-         @media all and (min-width:775px) {
-
-       
-        
-            #entetePage1, #entetePage2,footer{
-                justify-content: center;
-                align-items: center;
-            }
-        
-           #blocCentralPage1, #blocCentralPage2{
-                justify-content: space-evenly;
-                align-items:center;
-        
-           }
-            footer{
-                flex-direction: row;
-            }
-        
-        
-            footer {
-                margin-top: 100px;
-            }    
-        
-        
-            
-        } 
-
-       
