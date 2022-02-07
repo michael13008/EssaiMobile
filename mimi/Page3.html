@@ -1,12 +1,15 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
     <head>
         <title>Home page projet NFA016</title>
         <meta charset="utf-8">
         <meta name="author" content="Mike PAVIO">
+        <link rel="stylesheet" href="Dimanche06fevrier.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="PageStyle.css">
+
+
+
     </head>
 
     <body>
@@ -42,73 +45,61 @@
         </header>
 
         <section id="blocCentralPage2">
+            <h3>Bienvenue Monsieur DURAND</h3>
+
 
             <article id="temperatureCentraleGauche">
-                <div id="aligneImageTexte">  
+
+                <h4>Aujourd'hui le 02 février 2022</h4>
+                <div class="aligneImageTexte">  
                     <div><img src="Maison.png" alt="Temperature interieure"> </div>
-                    <div>Température actuelle : 25 degrés.</div>
+                    <div>Température actuelle : <span id="temperature1">25 </span> degrés.</div>
                 </div> 
 
-                <p> Conseil : baissez votre chauffage !</p>
+                <p id="conseil1"> Conseil : baissez votre chauffage !</p>
                 <p> <span>Historique des relevés journaliers <a href="#releveTemperatureMasque">ici</a></span></p>
 
-                <div id="aligneImageTexte">  
+                <div class="aligneImageTexte">  
                     <div><img src="Exterieur.png" alt="Temperature exterieure">    </div> 
-                    <div>Température actuelle : 4 degrés   </div> 
+                    <div>Température actuelle : <span id="temperature2"> 4 </span>  degrés  </div> 
                 </div> 
 
-                <p> Conseil : mettez des vêtements chauds !</p>
+                <p id="conseil2"> Conseil : mettez des vêtements chauds !</p>
                 <p>  <span>Historique des relevés journaliers <a href="#releveTemperatureMasque">ici</a></span></p>
+
+
             </article>
 
             <aside id="imageCote2">
-
             </aside>
 
-       <!--     <article id="temperatureCentraleMilieu">
-                <p>A 1h00 du matin la témpérature extéreieure était de 4 degrés celcius et la température</p>
-                <p> intérieure de 22 degrés celcius</p>
-                <p>Notre conseil : Baisser la témpérature de vos pièces et couvrez vous en sortant</p>
-
-                <p>A 4h00 du matin la témpérature extéreieure était de 6 degrés celcius et la température</p>
-                <p> intérieure de 21.5 degrés celcius</p>
-                <p>Notre conseil : Baisser la témpérature de vos pièces et couvrez vous en sortant</p>
-
-                <p>A 7h00 du matin la témpérature extéreieure était de 7.5 degrés celcius et la température</p>
-                <p> intérieure de 22 degrés celcius</p>
-                <p>Notre conseil : Baisser la témpérature de vos pièces et couvrez vous en sortant</p>
-            </article>
 
         </section>
 
-    -->
-
         <section id="releveTemperatureMasque">
 
-            <h2> <a href="" >FERMER X </a></h2>    
-            <h2>Aujourd'hui, 22 janvier 2022</h2>
-            <ul>
-                <li> <div>7h00 </div></li>
-                <li><div> <img src="Exterieur.png" alt="Temperature exterieure"> <span>  -2°</span> </div></li> 
-                <li><div> <img src="Maison.png" alt="Temperature interieure"> <span>  19.5</span> </div></li> 
-                <li>Notre conseil : Couvrez-vous et faites attention au vergals !</li>
+        <h2> <a href="" >FERMER X </a></h2>    
+        <h2>Aujourd'hui, 22 janvier 2022</h2>
+        <ul>
+            <li> <div>7h00 </div></li>
+            <li><div> <img src="Exterieur.png" alt="Temperature exterieure"> <span id="test1">  -2°</span> </div></li> 
+            <li><div> <img src="Maison.png" alt="Temperature interieure"> <span id="test2">  19.5</span> </div></li> 
+            <li>Notre conseil : Couvrez-vous et faites attention au vergals !</li>
 
-       <!--Espace plus grand entre les relevés horaires-->
-                 <li> <div>4h00 </div></li>
-                <li><div> <img src="Exterieur.png" alt="Temperature exterieure"> <span>  -2°</span> </div></li> 
-                 <li><div> <img src="Maison.png" alt="Temperature interieure"> <span>  19.5</span> </div></li> 
-                 <li>Notre conseil : Couvrez-vous et faites attention au vergals !</li>
+   <!--Espace plus grand entre les relevés horaires-->
+             <li> <div>4h00 </div></li>
+            <li><div> <img src="Exterieur.png" alt="Temperature exterieure"> <span class="marre">  -2°</span> </div></li> 
+             <li><div> <img src="Maison.png" alt="Temperature interieure"> <span class="marre">   19.5</span> </div></li> 
+             <li>Notre conseil : Couvrez-vous et faites attention au vergals !</li>
 
-                 <li> <div>1h00 </div></li>
-                <li><div> <img src="Exterieur.png" alt="Temperature exterieure"> <span>  -2°</span> </div></li> 
-                 <li><div> <img src="Maison.png" alt="Temperature interieure"> <span>  19.5</span> </div></li> 
-                 <li>Notre conseil : Couvrez-vous et faites attention au vergals !</li>
+             <li> <div>1h00 </div></li>
+            <li><div> <img src="Exterieur.png" alt="Temperature exterieure"> <span>  -2°</span> </div></li> 
+             <li><div> <img src="Maison.png" alt="Temperature interieure"> <span>  19.5</span> </div></li> 
+             <li>Notre conseil : Couvrez-vous et faites attention au vergals !</li>
 
-            </ul>     
+        </ul>     
 
-         </section>      
-
-    </section>
+        </section>   
 
         <footer>
 
@@ -128,7 +119,10 @@
                             <li>Contactez-nous</li>
                         </ul>    
                     </footer>
-            
+
+                    <script src="Dimanche06fevrierEssai.js"> </script>
+
+                    
                 </body>
             
             </html>        
